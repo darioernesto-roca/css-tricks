@@ -1,0 +1,39 @@
+/* To create CSS variables */
+
+:root {
+  --primary-font-size: 16px;
+  --secondary-font-size: 14px;
+  --tertiary-font-size: 18px;
+  --primary-color: tomato;
+}
+
+body {
+  font-size: var(--primary-font-size);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: var(--tertiary-font-size);
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: calc(var(--tertiary-font-size) - 2px);
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: calc(var(--tertiary-font-size) - 4px);
+  color: var(--primary-color);
+}
+
+ul {
+  font-size: var(--secondary-font-size);
+  color: var(--primary-color);
+}
+
+ol {
+  font-size: var(--tertiary-font-size)  ;
+  color: var(--primary-color);
+}
+
