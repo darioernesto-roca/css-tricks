@@ -5,7 +5,22 @@
   --secondary-font-size: 14px;
   --tertiary-font-size: 18px;
   --primary-color: tomato;
+
+/* dynamic theming */
+  --base-size: 1rem;
+  --scale: 1.25;
+
+  --font-sm: calc(var(--base-size) / var(--scale));
+  --font-md: var(--base-size);
+  --font-lg: calc(var(--base-size) * var(--scale));
+  --font-xl: calc(var(--base-size) * var(--scale) * 2);
+
+  /* Variables conditioned by media queries */
+  --padding: 16px;
+  --margin: 16px;
 }
+
+
 
 body {
   font-size: var(--primary-font-size);
@@ -37,3 +52,12 @@ ol {
   color: var(--primary-color);
 }
 
+@media (min-width: 768px) {
+  :root {
+    --padding: 32px;
+  }
+}
+
+.card {
+  padding: var(--padding);
+}
