@@ -27,10 +27,12 @@ body {
   color: var(--primary-color);
 }
 
+/* clamp is used to create a responsive font size that scales between a minimum and maximum value */
 h1 {
-  font-size: var(--tertiary-font-size);
+  font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
   color: var(--primary-color);
 }
+
 
 h2 {
   font-size: calc(var(--tertiary-font-size) - 2px);
